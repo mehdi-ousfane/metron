@@ -1,0 +1,4 @@
+dist/
+exports/
+node_modules/
+.env

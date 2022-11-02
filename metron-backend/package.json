@@ -1,0 +1,51 @@
+{
+  "name": "metron-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Mehdi OUSFANE",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc --project tsconfig.json",
+    "build:watch": "tsc --project tsconfig.json --watch",
+    "nodemon": "nodemon ./index.js",
+    "start": "concurrently \"npm run build:watch\" \"npm run nodemon\"",
+    "test": "jest src",
+    "lint": "ts-standard src/ && prettier -l src/",
+    "lint:fix": "ts-standard src/ --fix && prettier --write src/"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "9.0.6",
+    "apollo-server-core": "3.10.4",
+    "apollo-server-express": "3.10.3",
+    "cors": "2.8.5",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "graphql": "16.6.0",
+    "graphql-tools": "8.3.8",
+    "https-proxy-agent": "5.0.1",
+    "source-map-support": "0.5.21",
+    "twitter": "1.7.1"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.14",
+    "@types/jest": "29.2.0",
+    "@types/node": "18.11.8",
+    "@typescript-eslint/eslint-plugin": "5.41.0",
+    "@typescript-eslint/parser": "5.41.0",
+    "concurrently": "7.5.0",
+    "eslint": "8.26.0",
+    "jest": "29.2.2",
+    "nodemon": "2.0.20",
+    "prettier": "2.7.1",
+    "ts-jest": "29.0.3",
+    "ts-node": "10.9.1",
+    "ts-standard": "12.0.1",
+    "typescript": "4.8.4"
+  }
+}
